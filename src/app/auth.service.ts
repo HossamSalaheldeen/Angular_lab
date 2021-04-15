@@ -15,5 +15,9 @@ export class AuthService {
   broadcastAuthValue(value: boolean) : void {
     this._authSubject.next(value);
   }
+
+  get isLoggedIn(): boolean {
+    return this._authSubject.value;
+  }
   constructor() { }
 }
